@@ -2,7 +2,7 @@
 layout: post
 title:  "How to develop a machine learning solution with TDD"
 date:   2019-10-02 
-categories: 
+tags: [ml, tdd]
 ---
 
 Machine learning algorithms are based on stochastic process, which makes it freakingly difficult to test.
