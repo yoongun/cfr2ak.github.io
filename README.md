@@ -8,7 +8,7 @@ Clones this repository and run the `jekyll serve`
 
 ```bash
 git clone https://github.com/cfr2ak/cfr2ak.github.io.git
-cd cfr2ak.github.io/docs
+cd cfr2ak.github.io
 jekyll serve
 ```
 
