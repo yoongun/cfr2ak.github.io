@@ -1,5 +1,9 @@
+# Jekyll
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
 vendor
+
+# Template files
+_posts/template.markdown
