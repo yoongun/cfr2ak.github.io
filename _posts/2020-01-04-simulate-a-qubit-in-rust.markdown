@@ -35,7 +35,7 @@ tags: [qc, rust]
 
 The source code I used on this article is upload on my Github ([link](https://github.com/cfr2ak/qubit-rust))
 
-# What is the Qubit?
+## What is the Qubit?
 
 Qubit is the most fundamental components of the quantum computer. It is same as a bit on a classical one and is called qubit because it is a 'quantum bit'. The state of the qubit is defined as the equation below.
 
@@ -57,15 +57,15 @@ $$\alpha = cos{\frac{\theta}{2}}$$
 
 $$\beta = e^{i\phi}\sin{\frac{\theta}{2}}$$
 
-# Implement Qubit in Rust
+## Implement Qubit in Rust
 
-## Why Rust?
+### Why Rust?
 
 The most difference between the classical bit and the qubit is that the qubit is not able to copy to produce another qubit. But in the most of the programming language, to copy the value of the variable, struct, or the instance of the class is too easy thing to avoid it.
 
 In Rust, there is a paradigm which is called 'ownership'. This makes copying a variable as a nontrivial job. To enable the copy of the variable in Rust, you should implement Copy trait for your struct intentionally. On the other language, you have to implement more code to prohibit copy on a qubit but in Rust, it is default and you even can get compiler error when you make a mistake.
 
-## Create a project
+### Create a project
 
 Run the command below to create you project. We will edit main.rs to implement all the code in this article.
 
@@ -73,7 +73,7 @@ Run the command below to create you project. We will edit main.rs to implement a
 cargo new qubit-rust
 {% endhighlight %}
 
-## Implement Qubit type
+### Implement Qubit type
 
 First, let's define the test for a qubit type.
 
@@ -108,7 +108,7 @@ impl Default for Qubit {
 
 Run **cargo test** to check your code works well.
 
-## Implement the measurement
+### Implement the measurement
 
 Add a test for measurement. You should get value 0 when its theta has initialized as a 0.0 and 1 when it has initialized as a pi.
 
@@ -169,7 +169,7 @@ impl Qubit {
 
 Run **cargo test** to check the code works well.
 
-## Implement collapse of the state
+### Implement collapse of the state
 
 Qubit can have a state somewhere between 0 and 1 and can be detected only with that values (it is wrong actually, but let's assume it). Fun part of the qubit is that its state collapse to the state it returned after measurement which means that if you get 0 on the first measurement, you only can get 0 on the further measurement. Let's implement this property to our Qubit type. First, define the test.
 
@@ -211,7 +211,7 @@ impl Qubit {
 
 You've done! You implemented a simulator of a qubit in a Rust. Let's check whether our code works well by changing our main code as below.
 
-## Run and test
+### Run and test
 
 {% highlight rust %}
 fn main() {
@@ -226,6 +226,6 @@ fn main() {
 
 This should prints out random thousand of 0, 1 values.
 
-# What is not implemented here
+## What is not implemented here
 
 Actually, there is a phase factor on a equation I've introduced very early of this article but we've never used that. Phase is not able to measure directly but you can apply its relative phase to the state between 0 and 1 with the process using quantum gates. And there is a phenomenon which is called entanglement. Qubit itself is not really interesting since we can get the same result really easily on a classical computer using random seeds too. The entanglement and the phase are the phenomenon which qubit only has while classical one does not. I would like to recommend you to research on your own about these topic.
