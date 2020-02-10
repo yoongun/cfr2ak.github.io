@@ -2,7 +2,7 @@
 layout: post
 title:  "Simulate wiener process in Julia"
 date:   2020-01-04
-categories: 
+tags: [simulation, physics, julia]
 ---
 
 {% include mathjax.html %}
