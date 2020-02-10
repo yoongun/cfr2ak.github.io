@@ -5,33 +5,7 @@ date:   2020-01-04
 categories: 
 ---
 
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    extensions: [
-      "tex2jax.js",  
-      "MathMenu.js",
-      "MathZoom.js",
-      "AssistiveMML.js",
-      "a11y/accessibility-menu.js"
-    ],
-    tex2jax: {      // AND HERE
-      inlineMath: [['$', '$']],
-      displayMath: [['$$', '$$']]
-    },
-    jax: ["input/TeX", "output/CommonHTML"],
-    TeX: {
-      extensions: [
-        "AMSmath.js",
-        "AMSsymbols.js",
-        "noErrors.js",
-        "noUndefined.js",
-      ]
-    }
-  });
-</script>
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+{% include mathjax.html %}
 
 You can get the source code from [my Github](https://github.com/cfr2ak/wiener-process-julia)
 
