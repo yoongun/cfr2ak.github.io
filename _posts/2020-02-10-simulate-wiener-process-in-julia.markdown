@@ -14,7 +14,7 @@ You can get the source code from [my Github](https://github.com/cfr2ak/wiener-pr
 Brownian motion is a sort of random walk process which represents a physical phenomenon of
 stochastic movement in a micro-world.
 
-This the picture I'd took from the microscope (with x40 lense and CMOS sensor).
+This is the picture I'd took from the microscope (with x40 lense and CMOS sensor).
 
 ![Picture of the brownian particle](/assets/brown.jpg)
 
