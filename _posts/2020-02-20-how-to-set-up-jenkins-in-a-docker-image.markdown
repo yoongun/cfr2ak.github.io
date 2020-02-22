@@ -8,9 +8,9 @@ tags: [jenkins, docker]
 {% include mathjax.html %}
 
 
-# How to set up jenkins over docker
+## How to set up jenkins over docker
 
-## Prerequisite
+### Prerequisite
 
 You need to know your host os' docker group's gid. To check the gid, enter the command below on the shell.
 
@@ -18,7 +18,7 @@ You need to know your host os' docker group's gid. To check the gid, enter the c
 id
 ```
 
-## Final Dockerfile
+### Final Dockerfile
 
 ```dockerfile
 FROM jenkins/jenkins:latest
@@ -35,7 +35,7 @@ RUN usermod -g docker jenkins
 USER jenkins 
 ```
 
-## Explanation
+### Explanation
 
 First, pull the jenkins official image.
 
@@ -91,7 +91,7 @@ Change to non-root user
 USER jenkins 
 ```
 
-## Build docker image
+### Build docker image
 
 Build docker image with tag.
 
@@ -99,7 +99,7 @@ Build docker image with tag.
 docker build <path_to_dockerfile> -t jenkins
 ```
 
-## Ship it!
+### Ship it!
 
 Share the docker socket on host os with the option
 
