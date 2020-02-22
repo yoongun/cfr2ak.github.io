@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why you should try the Pomodoro technique?"
-date:   2020-10-16
+date:   2019-10-16
 tags: [pomodoro, productivity]
 ---
 
